@@ -75,8 +75,8 @@ def get_users(
     repo: UserQueries = Depends(),
     managers: ManagerQueries = Depends()
 ):
-    user_id = account_data["id"] #sets user_id to the logged in user
-    manager = managers.get_manager_by_km(user_id)    #gets manager by kitchen manager id
+    user_id = account_data["id"]   # sets user_id to the logged in user
+    manager = managers.get_manager_by_km(user_id)    # gets manager by kitchen manager id
     if isinstance(manager, ManagerOut):
         property_id = manager.property    # get the property id of the logged in user
     else:

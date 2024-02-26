@@ -54,7 +54,7 @@ function PropertyCreateForm() {
 
   useEffect(() => {
     getUser(setUserInfo, token);
-  }, [token]); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [token]); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,7 +67,6 @@ function PropertyCreateForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // post for create property
     const propertyData = {
       property_name: property.property_name,
       street: property.street,
